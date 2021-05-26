@@ -1,5 +1,5 @@
 import './App.css';
-import ExpenseItem from './components/ExpenseItem'
+import Expenses from './components/Expenses'
 
 function App() {
 
@@ -27,13 +27,10 @@ function App() {
 
   return (
     <div className="App">
-      <ExpenseItem data={expenses[0]}></ExpenseItem>
-      <ExpenseItem data={expenses[1]}></ExpenseItem>
-      <ExpenseItem data={expenses[2]}></ExpenseItem>
-      <ExpenseItem data={expenses[3]}></ExpenseItem>
+      <Expenses items= {expenses}/>
 
     </div>
   );
-}
+} 
 
 export default App;
