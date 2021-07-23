@@ -6,22 +6,20 @@ import Card from '../UI/Card';
 
 function ExpenseItem(props) {
 
-     const [ expenseTitle, setExpenseTitle ] = useState(props.data?.title);
+    const expenseTitle = props.data.title;
+    const expenseAmount = props.data.amount;
 
-    const expenseAmount = props.data?.amount;
-
-    const clickHandler = () => {
+   /* const clickHandler = () => {
         setExpenseTitle('updated');
-    }
-
+    }*/
+//            <button onClick={clickHandler}>Change Title</button>
     return (
         <Card className="expense-item">
-            <ExpenseDate date={props.data?.date}/>
+            <ExpenseDate date={props.data.date}/>
             <div className="expense-item__description">
                 <h2>{expenseTitle}</h2>
                 <div className="expense-item__price">${expenseAmount}</div>
             </div>
-            <button onClick={clickHandler}>Change Title</button>
         </Card>
     );
 }
